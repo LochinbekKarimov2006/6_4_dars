@@ -11,5 +11,106 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 120vh;
+}
+body{
+  background-color: aliceblue;
+}
+.div-2{
+  border-radius: 24px;
+  margin: 60px auto;
+  width: 778px;
+  background-color: rgb(255, 255, 255);
+  padding: 32px 38px;
+}
+.div-4 h1{
+font-size: 32px;
+font-weight: 500;
+line-height: 41.6px;
+color: #2A2941;
+
+}
+.p-1{
+  margin-top: 16px;
+font-size: 16px;
+font-weight: 450;
+line-height: 20.8px;
+color: #B3B3B3;
+}
+.div-5{
+  margin-bottom: 20px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap:14px;
+}
+.div-5 div{
+  width: 84px;
+  height: 84px;
+  background-color: blueviolet;
+  border-radius: 50px;
+}
+.div-5 h6{
+font-size: 16px;
+font-weight: 500;
+color: #5361E4;
+}
+.div-6{
+  width: 1005;
+  
+}
+.div-6 input{
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.label{
+font-size: 14px;
+font-weight: 450;
+
+}
+.div-7{
+  display: flex;
+  gap: 10px;
+}
+.div-7 button{
+  width: 60px;
+  height: 60px;
+  border: double 1px #bdbdbd;
+  border-radius:12px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div-8{
+  display:grid;
+  grid-template-columns: 48% 48%;
+  justify-content: space-between;
+  gap:4% ;
+}
+.div-8 select{
+  width: 100%;
+}
+textarea{
+  border: 1px  double #dedddd;
+  height: 148px;
+  width: 100%;
+  border-radius: 14px;
+}
+.div-9 button{
+  width: 173px;
+  height: 60px;
+  border-radius: 16px;
+  background-color: #5361E4;
+font-size: 16px;
+font-weight: 500;
+letter-spacing: 1px;
+text-align: center;
+color: azure;
+}
+.div-9{
+  margin-top: 42px;
+  display: flex;
+  justify-content: space-between;
 }
