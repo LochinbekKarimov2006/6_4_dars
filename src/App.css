@@ -121,3 +121,8 @@ color: azure;
   height: 84px;
   border-radius: 50px;
 }
+.div-10{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}

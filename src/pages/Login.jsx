@@ -34,11 +34,28 @@ function Login() {
             yashashJoy,
             hodimlar,
             izoh,
-            imageUrl
+            imageUrl,
+            dunyo,
+            instagram,
+            telegram,
+            feyzbuk,
+            github,
         }
         console.log(data)
     }
-
+    let [dunyo,setDunyo]=useState(false)
+    let [instagram,setInstagram]=useState(false)
+    let [telegram,setTelegram]=useState(false)
+    let [feyzbuk,setFeyzbuk]=useState(false)
+    let [github,setGithub]=useState(false)
+    function korinmas (e){
+        setDunyo(false)
+        setInstagram(false)
+        setTelegram(false)
+        setFeyzbuk(false)
+        setGithub(false)
+        console.log(e)
+    }
     return (
         <div className='div-2'>
             <div className='div-3'>
@@ -67,13 +84,22 @@ function Login() {
                         <input onChange={(e) => { setTel(e.target.value) }} id='name3' type="text" placeholder="UZ +9989" className="input input-bordered w-full" />
                     </div>
                     <p className='label'>Linklar *</p>
+                    <div className='div-10'>
                     <div className='div-7'>
-                        <button><img src={img1} alt="" /></button>
-                        <button><img src={img2} alt="" /></button>
-                        <button><img src={img3} alt="" /></button>
-                        <button><img src={img4} alt="" /></button>
-                        <button><img src={img5} alt="" /></button>
+                        <button onClick={(e)=>{korinmas(e), setDunyo(true)}}><img src={img5} alt="" /></button>
+                        <button onClick={(e)=>{korinmas(e), setInstagram(true)}}><img src={img2} alt="" /></button>
+                        <button onClick={(e)=>{korinmas(e), setTelegram(true)}}><img src={img4} alt="" /></button>
+                        <button onClick={(e)=>{korinmas(e), setFeyzbuk(true)}}><img src={img1} alt="" /></button>
+                        <button onClick={(e)=>{korinmas(e), setGithub(true)}}><img src={img3} alt="" /></button>
                     </div>
+                    {dunyo&&<input onChange={(e) => { setDunyo(e.target.value) }} id='name3' type="text" placeholder="Link kiriting" className="input input-bordered w-full" />}
+                    {instagram&&<input onChange={(e) => { setInstagram(e.target.value) }} id='name3' type="text" placeholder="Instagram link" className="input input-bordered w-full" />}
+                    {telegram&&<input onChange={(e) => { setTelegram(e.target.value) }} id='name3' type="text" placeholder="Telegram link" className="input input-bordered w-full" />}
+                    {feyzbuk&&<input onChange={(e) => { setFeyzbuk(e.target.value) }} id='name3' type="text" placeholder="Facbook link" className="input input-bordered w-full" />}
+                    {github&&<input onChange={(e) => { setGithub(e.target.value) }} id='name3' type="text" placeholder="Git Hub link" className="input input-bordered w-full" />}
+
+                    </div>
+
                     <div className='div-8'>
                         <div>
                             <p className='label'>Davlat *</p>
