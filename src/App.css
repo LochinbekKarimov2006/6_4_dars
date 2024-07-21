@@ -13,6 +13,9 @@
   justify-content: space-between;
   height: 120vh;
 }
+.kl{
+  display: none;
+}
 body{
   background-color: aliceblue;
 }
@@ -50,7 +53,7 @@ color: #B3B3B3;
   background-color: blueviolet;
   border-radius: 50px;
 }
-.div-5 h6{
+.div-5 .h6{
 font-size: 16px;
 font-weight: 500;
 color: #5361E4;
@@ -113,4 +116,9 @@ color: azure;
   margin-top: 42px;
   display: flex;
   justify-content: space-between;
+}
+.img{
+  width: 84px;
+  height: 84px;
+  border-radius: 50px;
 }
