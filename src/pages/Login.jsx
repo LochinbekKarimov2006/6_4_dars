@@ -48,7 +48,7 @@ function Login() {
             feyzbuk,
             github,
         }
-        localStorage.setItem('data', data);
+        localStorage.setItem('data', JSON.stringify(data));
         console.log(data)
         setName('');
         setEmail('');
@@ -126,7 +126,7 @@ function Login() {
                         <div>
                             <p className='label'>Davlat *</p>
                             <select value={davlat} onChange={(e) => { setDavlat(e.target.value) }} className="select select-bordered w-full ">
-                                <option disabled selected>Davlat</option>
+                                <option disabled defaultValue>Davlat</option>
                                 <option>Uz</option>
                                 <option>Rs</option>
                             </select>
@@ -134,7 +134,7 @@ function Login() {
                         <div>
                             <p className='label'>Shahar *</p>
                             <select value={shahar} onChange={(e) => { setShahar(e.target.value) }} className="select select-bordered w-full ">
-                                <option disabled selected>Shahar</option>
+                                <option disabled defaultValue>Shahar</option>
                                 <option>Fargona</option>
                                 <option>Toshkent</option>
                             </select>
