@@ -6,6 +6,7 @@ import img4 from "../img/img4.png"
 import img5 from "../img/img5.png"
 
 function Login() {
+    
     let [name, setName] = useState('')
     let [email, setEmail] = useState('')
     let [tel, setTel] = useState('')
@@ -29,7 +30,8 @@ function Login() {
         }
     };
 
-    function keyingisi() {
+    function keyingisi(e) {
+        e.preventDefault()
         let data = {
             name,
             email,
@@ -106,11 +108,11 @@ function Login() {
                     <p className='label'>Linklar *</p>
                     <div className='div-10'>
                     <div className='div-7'>
-                        <button onClick={(e)=>{korinmas(e), setDunyo1(true)}}><img src={img5} alt="" /></button>
-                        <button onClick={(e)=>{korinmas(e), setInstagram1(true)}}><img src={img2} alt="" /></button>
-                        <button onClick={(e)=>{korinmas(e), setTelegram1(true)}}><img src={img4} alt="" /></button>
-                        <button onClick={(e)=>{korinmas(e), setFeyzbuk1(true)}}><img src={img1} alt="" /></button>
-                        <button onClick={(e)=>{korinmas(e), setGithub1(true)}}><img src={img3} alt="" /></button>
+                        <button onClick={(e)=>{ e.preventDefault(), korinmas(e), setDunyo1(true)}}><img src={img5} alt="" /></button>
+                        <button onClick={(e)=>{ e.preventDefault(),korinmas(e), setInstagram1(true)}}><img src={img2} alt="" /></button>
+                        <button onClick={(e)=>{ e.preventDefault(),korinmas(e), setTelegram1(true)}}><img src={img4} alt="" /></button>
+                        <button onClick={(e)=>{ e.preventDefault(),korinmas(e), setFeyzbuk1(true)}}><img src={img1} alt="" /></button>
+                        <button onClick={(e)=>{ e.preventDefault(),korinmas(e), setGithub1(true)}}><img src={img3} alt="" /></button>
                     </div>
                     {dunyo1&&<input value={dunyo} onChange={(e) => { setDunyo(e.target.value) }} id='name3' type="text" placeholder="Link kiriting" className="input input-bordered w-full" />}
                     {instagram1&&<input value={instagram} onChange={(e) => { setInstagram(e.target.value) }} id='name3' type="text" placeholder="Instagram link" className="input input-bordered w-full" />}
@@ -148,7 +150,7 @@ function Login() {
                     </div>
                     <div className='div-9'>
                         <button>Ortga</button>
-                        <button type='submit' onClick={() => { keyingisi() }}>Keyingisi</button>
+                        <button type='submit' onClick={(e) => { keyingisi(e) }}>Keyingisi</button>
                     </div>
                 </div>
                     
