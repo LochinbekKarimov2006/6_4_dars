@@ -78,6 +78,7 @@ function Login() {
     return (
         <div className='div-2'>
             <div className='div-3'>
+                <form action="">
                 <div className='div-4'>
                     <h1>Kompaniya ma’lumotlari</h1>
                     <p className='p-1'>Kompaniya haqidagi ma’lumotlarni kiriting</p>
@@ -147,9 +148,11 @@ function Login() {
                     </div>
                     <div className='div-9'>
                         <button>Ortga</button>
-                        <button onClick={() => { keyingisi() }}>Keyingisi</button>
+                        <button type='submit' onClick={() => { keyingisi() }}>Keyingisi</button>
                     </div>
                 </div>
+                    
+                </form>
             </div>
         </div>
     )
